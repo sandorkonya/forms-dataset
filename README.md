@@ -10,7 +10,7 @@ Filters:
 - r.headers["Content-Length"] < 12000000   (arbitrarily set to avoid long DL)
 - r.headers["Content-Type"] in ["application/pdf","stream/pdf"]
 
-PDF-s that got thorugh, were opened with pymupdf
+PDF-s that got through, were opened with pymupdf
 - doc = fitz.open(stream=r.content, filetype="pdf")
 
 Data collected:
@@ -19,10 +19,15 @@ Data collected:
 - doc.is_form_pdf (0 if no form element, positive int if any, showing the number of form elements)
 
 
+
 URL-s parsed: 20 888 505
+
 PDFs available online: 7 169 385
+
 PDFs with exactly 1 form element:  152164
+
 PDFs with more than 1 form element:  66046 
+
 Documents with 5+ Form elements and one page: 19824
 
 Insights:
